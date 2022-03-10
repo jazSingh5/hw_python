@@ -1,15 +1,11 @@
 import time
-from functools import wraps
 
 
-def calculate_time(f):
-    @wraps(f)
-    def wrap(*args, **kw):
-        ts = time.time()
-        result = f(*args, **kw)
-        te = time.time()
-        tl = ts-te
-        print('Total time took: %2.4f sec' %
-              (f.__name__, args, kw, tl))
+def wrap_func(*args, **kwargs):
+        t1 = time.time()
+        result = func(*args, **kwargs)
+        t2 = time.time()
+        print(f'Function {func.__name__!r} executed in {(t2-t1):.4f}s')
         return result
-    return wrap
+    return wrap_func
+  
