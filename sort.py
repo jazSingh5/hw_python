@@ -9,7 +9,7 @@ def sort_list(lst):
         d = 0
         while (d <= n-i-1):
             if (lst[d+1] > lst[d]):
-                lst[d+1], lst[d] = lst[d+1], lst[d]
+                lst[d+1], lst[d] = lst[d], lst[d+1]
             d += 1
         i += 1
     return lst
