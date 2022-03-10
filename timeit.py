@@ -2,16 +2,16 @@ import time
 
 
 def calculate_time(f):
-    def wrapper():
+    def wrap():
         start = time.time()
         f()
-        finish = time.time()
-        print('Total time ', finish - start)
-    return wrapper
+        end = time.time()
+        print('Total time ', end - start)
+    return wrap
 
 
 def test():
-    time.sleep(3)
+    time.sleep(5)
 
 
 test = calculate_time(test)
