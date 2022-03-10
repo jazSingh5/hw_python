@@ -1,7 +1,7 @@
 import time
 
 
-def timer_func(func):
+def calculate_time(func):
 
     def wrap_func(*args, **kwargs):
         t1 = time.time()
