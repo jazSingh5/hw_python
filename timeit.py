@@ -1,4 +1,4 @@
-from time import time
+import time
 from functools import wraps
 
 
