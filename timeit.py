@@ -1,4 +1,4 @@
-import time
+mport time
 from functools import wraps
 
 
@@ -8,7 +8,8 @@ def calculate_time(f):
         ts = time.time()
         result = f(*args, **kw)
         te = time.time()
+        tl = ts-te
         print('Total time took: %2.4f sec' %
-              (f.__name__, args, kw, te-ts))
+              (f.__name__, args, kw, tl))
         return result
     return wrap
